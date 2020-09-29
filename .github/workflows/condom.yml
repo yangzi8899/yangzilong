@@ -22,5 +22,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           force: true
-          branch: compiled
+          branch: nothing
           github_token: ${{ secrets.GITHUB_TOKEN }}
