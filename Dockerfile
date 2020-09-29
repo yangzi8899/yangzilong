@@ -8,4 +8,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     mv /usr/bin/v2ray-plugin_linux_amd64 /usr/bin/onthing && \
     rm -rf /var/cache/apk/*
 
-CMD nothing -s 0.0.0.0 -p ${PORT:=3000} -k ${PASSWORD:=password} -m ${METHOD:=rc4-md5} --plugin onthing --plugin-opts "server;path=${WSPATH:=/nopath}"
+ADD nothing.sh /
+RUN chmod +x /nothing.sh
+
+CMD /nothing.sh
