@@ -8,7 +8,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     mv /usr/bin/v2ray-plugin_linux_amd64 /usr/bin/onthing && \
     rm -rf /var/cache/apk/*
 
-ADD nothing.sh /
-RUN chmod +x /nothing.sh
+ADD run.sh /run.sh
+RUN chmod +x /run.sh
 
-CMD /nothing.sh
+CMD /run.sh
